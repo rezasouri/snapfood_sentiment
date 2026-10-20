@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "evaluation_domain": "out_of_domain",
+  "source_lock_sha256": "47c4bd3ca4209b08ca7c6c54bbe6b5c569ea91da62666eeeadbf2b5e5c140c1b",
+  "sources": [
+    {
+      "dataset": "parsinlu_food",
+      "split": "train",
+      "filename": "parsinlu_food_train.jsonl",
+      "revision": "a3b08d0b93ca84e0017e2f490a2aa3ab36c79885",
+      "url": "https://raw.githubusercontent.com/persiannlp/parsinlu/a3b08d0b93ca84e0017e2f490a2aa3ab36c79885/data/sentiment-analysis/food_train.jsonl",
+      "sha256": "4d51b2a957c0e1a9027bf85654717db0a7a10cdbda3995ccd266bc1c19e7e60c",
+      "license": "CC-BY-NC-SA-4.0",
+      "parsed_rows": 6140,
+      "excluded": {
+        "unmapped_aspect:ارسال": 1535,
+        "unmapped_aspect:ارزش غذایی": 1535,
+        "unmapped_aspect:کلی": 1535
+      },
+      "checksum_verified": true
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "validation",
+      "filename": "parsinlu_food_dev.jsonl",
+      "revision": "a3b08d0b93ca84e0017e2f490a2aa3ab36c79885",
+      "url": "https://raw.githubusercontent.com/persiannlp/parsinlu/a3b08d0b93ca84e0017e2f490a2aa3ab36c79885/data/sentiment-analysis/food_dev.jsonl",
+      "sha256": "2d60d49125ebc77cad125bf0cb3dd737909575bc55dbc69f71df0c1477e1f2a3",
+      "license": "CC-BY-NC-SA-4.0",
+      "parsed_rows": 760,
+      "excluded": {
+        "unmapped_aspect:ارسال": 190,
+        "unmapped_aspect:ارزش غذایی": 190,
+        "unmapped_aspect:کلی": 190
+      },
+      "checksum_verified": true
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "test",
+      "filename": "parsinlu_food_test.jsonl",
+      "revision": "a3b08d0b93ca84e0017e2f490a2aa3ab36c79885",
+      "url": "https://raw.githubusercontent.com/persiannlp/parsinlu/a3b08d0b93ca84e0017e2f490a2aa3ab36c79885/data/sentiment-analysis/food_test.jsonl",
+      "sha256": "688c2a108735307669e06359d138be4bf49a62b970a2ff3347802714296b69a4",
+      "license": "CC-BY-NC-SA-4.0",
+      "parsed_rows": 768,
+      "excluded": {
+        "unmapped_aspect:ارسال": 192,
+        "unmapped_aspect:ارزش غذایی": 192,
+        "unmapped_aspect:کلی": 192
+      },
+      "checksum_verified": true
+    },
+    {
+      "dataset": "pars_absa",
+      "split": "train",
+      "filename": "Pars-ABSA_train.txt",
+      "revision": "4f71c10a4b84a52f38f4f35bbf84f4362b68d716",
+      "url": "https://raw.githubusercontent.com/Titowak/Pars-ABSA/4f71c10a4b84a52f38f4f35bbf84f4362b68d716/Pars-ABSA_train.txt",
+      "sha256": "83247789a1b34cf547bdccedec6b13d9f461026bebda7d7bdf0b2b17d0500e34",
+      "license": "not_declared_in_repository",
+      "parsed_rows": 7995,
+      "excluded": {
+        "invalid_target_placeholder": 6
+      },
+      "checksum_verified": true
+    },
+    {
+      "dataset": "pars_absa",
+      "split": "test",
+      "filename": "Pars-ABSA_test.txt",
+      "revision": "4f71c10a4b84a52f38f4f35bbf84f4362b68d716",
+      "url": "https://raw.githubusercontent.com/Titowak/Pars-ABSA/4f71c10a4b84a52f38f4f35bbf84f4362b68d716/Pars-ABSA_test.txt",
+      "sha256": "29846f61cd80bdf7541e4759cf3b8d107e0c658888bf6f38615d4c3da8b7d45d",
+      "license": "not_declared_in_repository",
+      "parsed_rows": 2000,
+      "excluded": {
+        "invalid_target_placeholder": 1
+      },
+      "checksum_verified": true
+    }
+  ],
+  "runtime_versions": {
+    "package": "0.1.0",
+    "pydantic": "2.14.1"
+  },
+  "prepared": [
+    {
+      "dataset": "pars_absa",
+      "split": "test",
+      "rows": 1996,
+      "review_groups": 1716,
+      "taxonomy_eligible_rows": 65,
+      "aspect_counts": {
+        "price_value": 62,
+        "packaging": 3
+      },
+      "sentiment_counts": {
+        "positive": 1020,
+        "negative": 612,
+        "neutral": 364
+      },
+      "aspect_term_span_rows": 1996,
+      "sha256": "0a56425d729aad232d3fe51a87e49c4d1349f0c450a9f20f08b1a16f754ce58f"
+    },
+    {
+      "dataset": "pars_absa",
+      "split": "train",
+      "rows": 5845,
+      "review_groups": 3865,
+      "taxonomy_eligible_rows": 203,
+      "aspect_counts": {
+        "price_value": 194,
+        "packaging": 9
+      },
+      "sentiment_counts": {
+        "positive": 2799,
+        "negative": 1808,
+        "neutral": 1238
+      },
+      "aspect_term_span_rows": 5845,
+      "sha256": "29d6f9573bc265f708268fe45654914d2a7309454ff6f72599ffe63e1c2a59dc"
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "test",
+      "rows": 768,
+      "review_groups": 192,
+      "taxonomy_eligible_rows": 768,
+      "aspect_counts": {
+        "taste_quality": 384,
+        "price_value": 192,
+        "packaging": 192
+      },
+      "sentiment_counts": {
+        "absent": 569,
+        "positive": 94,
+        "negative": 92,
+        "mixed": 8,
+        "neutral": 5
+      },
+      "aspect_term_span_rows": 0,
+      "sha256": "40ee8331ecfc6768ee91a4938d5a8e6e685646cd2511b2116012441d379396d5"
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "train",
+      "rows": 6140,
+      "review_groups": 1535,
+      "taxonomy_eligible_rows": 6140,
+      "aspect_counts": {
+        "taste_quality": 3070,
+        "price_value": 1535,
+        "packaging": 1535
+      },
+      "sentiment_counts": {
+        "absent": 4524,
+        "negative": 724,
+        "positive": 840,
+        "mixed": 44,
+        "neutral": 8
+      },
+      "aspect_term_span_rows": 0,
+      "sha256": "b875c243276c7e1c1088329d30e94deaeb8fe963b7a481c1fdb9225d8244d984"
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "validation",
+      "rows": 760,
+      "review_groups": 190,
+      "taxonomy_eligible_rows": 760,
+      "aspect_counts": {
+        "taste_quality": 380,
+        "price_value": 190,
+        "packaging": 190
+      },
+      "sentiment_counts": {
+        "positive": 91,
+        "absent": 566,
+        "negative": 94,
+        "mixed": 9
+      },
+      "aspect_term_span_rows": 0,
+      "sha256": "eece881f201aa38cb028e720d46551cac52e809047d3f5e90a9628eb5e354464"
+    }
+  ],
+  "leakage_and_duplicates_removed": {
+    "pars_absa:train:text_overlap_with_higher_priority_split": 2122,
+    "pars_absa:train:duplicate_example": 28,
+    "pars_absa:test:duplicate_example": 4
+  },
+  "parsinlu_review_level": [
+    {
+      "split": "test",
+      "reviews": 192,
+      "sha256": "350b7f3ae7f944fc434b64404798272ef1befc07a1762a62982487abf5af3c4c"
+    },
+    {
+      "split": "train",
+      "reviews": 1535,
+      "sha256": "8b540e8c49a721b6df57170dec8297acdd376781886ae30acb46e1dae1b25d87"
+    },
+    {
+      "split": "validation",
+      "reviews": 190,
+      "sha256": "6c328f922bdbab7f2bd667dbf87befafe0f20bd397b219509f96d8904e11b8d0"
+    }
+  ],
+  "total_prepared_rows": 15509,
+  "taxonomy_covered": [
+    "packaging",
+    "price_value",
+    "taste_quality"
+  ],
+  "taxonomy_without_gold_coverage": [
+    "temperature",
+    "delivery_delay",
+    "courier_behavior",
+    "portion_size",
+    "missing_wrong_items"
+  ],
+  "limitations": [
+    "No benchmark score is SnappFood accuracy.",
+    "ParsiNLU absent is not neutral and its queried aspect has no evidence-span gold.",
+    "Pars-ABSA spans mark aspect terms, not supporting opinion spans.",
+    "Only exact curated general-product targets are mapped to the food taxonomy.",
+    "No model was trained or evaluated in preparation; F1 and inference cost are not measured."
+  ]
+}

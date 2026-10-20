@@ -1,0 +1,5 @@
+relation,left_rows,matched_left_rows,unmatched_left_rows,coverage,right_rows,distinct_right_keys,basis
+replies_to_reviews,2356705,2356705,0,1.0,6536959,6536959,full_dataset_exact_identifier_join
+menus_to_vendors,2104473,2104473,0,1.0,42249,42249,full_dataset_exact_identifier_join
+reviews_to_menu_alias,6536959,6536959,0,1.0,1408550,1408550,full_dataset_exact_identifier_join
+reviews_to_vendor_code_direct,6536959,0,6536959,0.0,42249,42249,full_dataset_exact_identifier_join

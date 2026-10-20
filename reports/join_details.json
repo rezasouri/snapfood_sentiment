@@ -1,0 +1,23 @@
+{
+  "reviews_ambiguous_vendor_rows_by_alias_only": 74493,
+  "reviews_unique_vendor_rows_by_alias_only": 6462466,
+  "reviews_unique_vendor_coverage_by_alias_only": 0.9886043342171795,
+  "item_mapping_status": {
+    "exact_item": 6396964,
+    "id_collision": 20604,
+    "alias_unique_vendor_only": 103873,
+    "alias_ambiguous_only": 15518
+  },
+  "conservative_vendor_rows": 6500837,
+  "conservative_vendor_coverage": 0.9944741889921598,
+  "exact_item_coverage": 0.9785840786212672,
+  "exact_items_with_reviews": 452302,
+  "median_reviews_per_matched_item": 4.0,
+  "matched_items_ge_30_reviews": 47557,
+  "matched_items_ge_100_reviews": 10756,
+  "menu_aliases_repeated": 70345,
+  "menu_aliases_multiple_vendors": 62983,
+  "max_menu_rows_per_alias": 13267,
+  "review_menu_raw_join_rows": 6656650,
+  "note": "Exact item requires product_alias=CAST(menu.id AS VARCHAR)=menu.alias on the same unique menu row. Numeric id-only collisions are excluded. Alias-only vendor mapping requires exactly one vendor_code."
+}

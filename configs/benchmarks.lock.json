@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "parsinlu_hf_metadata_revision": "abecf6a01a45174b7aa9b861fcc4a586cc4c7f9d",
+  "sources": [
+    {
+      "dataset": "parsinlu_food",
+      "split": "train",
+      "filename": "parsinlu_food_train.jsonl",
+      "revision": "a3b08d0b93ca84e0017e2f490a2aa3ab36c79885",
+      "url": "https://raw.githubusercontent.com/persiannlp/parsinlu/a3b08d0b93ca84e0017e2f490a2aa3ab36c79885/data/sentiment-analysis/food_train.jsonl",
+      "sha256": "4d51b2a957c0e1a9027bf85654717db0a7a10cdbda3995ccd266bc1c19e7e60c",
+      "license": "CC-BY-NC-SA-4.0"
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "validation",
+      "filename": "parsinlu_food_dev.jsonl",
+      "revision": "a3b08d0b93ca84e0017e2f490a2aa3ab36c79885",
+      "url": "https://raw.githubusercontent.com/persiannlp/parsinlu/a3b08d0b93ca84e0017e2f490a2aa3ab36c79885/data/sentiment-analysis/food_dev.jsonl",
+      "sha256": "2d60d49125ebc77cad125bf0cb3dd737909575bc55dbc69f71df0c1477e1f2a3",
+      "license": "CC-BY-NC-SA-4.0"
+    },
+    {
+      "dataset": "parsinlu_food",
+      "split": "test",
+      "filename": "parsinlu_food_test.jsonl",
+      "revision": "a3b08d0b93ca84e0017e2f490a2aa3ab36c79885",
+      "url": "https://raw.githubusercontent.com/persiannlp/parsinlu/a3b08d0b93ca84e0017e2f490a2aa3ab36c79885/data/sentiment-analysis/food_test.jsonl",
+      "sha256": "688c2a108735307669e06359d138be4bf49a62b970a2ff3347802714296b69a4",
+      "license": "CC-BY-NC-SA-4.0"
+    },
+    {
+      "dataset": "pars_absa",
+      "split": "train",
+      "filename": "Pars-ABSA_train.txt",
+      "revision": "4f71c10a4b84a52f38f4f35bbf84f4362b68d716",
+      "url": "https://raw.githubusercontent.com/Titowak/Pars-ABSA/4f71c10a4b84a52f38f4f35bbf84f4362b68d716/Pars-ABSA_train.txt",
+      "sha256": "83247789a1b34cf547bdccedec6b13d9f461026bebda7d7bdf0b2b17d0500e34",
+      "license": "not_declared_in_repository"
+    },
+    {
+      "dataset": "pars_absa",
+      "split": "test",
+      "filename": "Pars-ABSA_test.txt",
+      "revision": "4f71c10a4b84a52f38f4f35bbf84f4362b68d716",
+      "url": "https://raw.githubusercontent.com/Titowak/Pars-ABSA/4f71c10a4b84a52f38f4f35bbf84f4362b68d716/Pars-ABSA_test.txt",
+      "sha256": "29846f61cd80bdf7541e4759cf3b8d107e0c658888bf6f38615d4c3da8b7d45d",
+      "license": "not_declared_in_repository"
+    }
+  ]
+}

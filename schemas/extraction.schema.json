@@ -1,0 +1,130 @@
+{
+  "$defs": {
+    "EvidenceSpan": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "text"
+      ],
+      "title": "EvidenceSpan",
+      "type": "object"
+    },
+    "ExtractionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "review_id": {
+          "minLength": 1,
+          "title": "Review Id",
+          "type": "string"
+        },
+        "aspect": {
+          "enum": [
+            "taste_quality",
+            "temperature",
+            "packaging",
+            "price_value",
+            "delivery_delay",
+            "courier_behavior",
+            "portion_size",
+            "missing_wrong_items"
+          ],
+          "title": "Aspect",
+          "type": "string"
+        },
+        "sentiment": {
+          "enum": [
+            "positive",
+            "negative",
+            "neutral",
+            "mixed",
+            "uncertain"
+          ],
+          "title": "Sentiment",
+          "type": "string"
+        },
+        "evidence_span": {
+          "$ref": "#/$defs/EvidenceSpan"
+        },
+        "label_source": {
+          "enum": [
+            "model_generated",
+            "rule_based",
+            "public_gold"
+          ],
+          "title": "Label Source",
+          "type": "string"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "validation_status": {
+          "default": "proposed",
+          "enum": [
+            "proposed",
+            "validated",
+            "rejected"
+          ],
+          "title": "Validation Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "review_id",
+        "aspect",
+        "sentiment",
+        "evidence_span",
+        "label_source",
+        "model_version"
+      ],
+      "title": "ExtractionRecord",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "review_id": {
+      "minLength": 1,
+      "title": "Review Id",
+      "type": "string"
+    },
+    "records": {
+      "items": {
+        "$ref": "#/$defs/ExtractionRecord"
+      },
+      "title": "Records",
+      "type": "array"
+    }
+  },
+  "required": [
+    "review_id",
+    "records"
+  ],
+  "title": "ReviewExtraction",
+  "type": "object"
+}

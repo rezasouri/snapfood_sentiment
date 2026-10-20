@@ -1,0 +1,269 @@
+{
+  "sample_size": 20000,
+  "seed": 42,
+  "method": "stable id hash sample",
+  "aspect_keyword_candidates": {
+    "taste_quality": 7808,
+    "temperature": 2285,
+    "portion": 1945,
+    "courier": 950,
+    "service": 515,
+    "price_value": 1103,
+    "packaging": 1124,
+    "delivery_delay": 1121,
+    "missing_wrong": 279
+  },
+  "candidate_aspects_per_review": {
+    "1": 6752,
+    "0": 8956,
+    "3": 1016,
+    "2": 2933,
+    "4": 263,
+    "5": 69,
+    "6": 10,
+    "7": 1
+  },
+  "manual_inspection_candidates": [
+    {
+      "review_id": 38290286,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 50119209,
+      "aspects": [
+        "taste_quality",
+        "temperature",
+        "portion"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 72480703,
+      "aspects": [
+        "courier",
+        "service"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 69234295,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 7931061,
+      "aspects": [
+        "taste_quality",
+        "temperature"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 64703612,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 8
+    },
+    {
+      "review_id": 47682723,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 70422216,
+      "aspects": [
+        "taste_quality",
+        "price_value",
+        "portion"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 49898712,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 47569088,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 51019605,
+      "aspects": [
+        "taste_quality"
+      ],
+      "feeling": "HAPPY",
+      "rate": 6
+    },
+    {
+      "review_id": 20926717,
+      "aspects": [
+        "taste_quality",
+        "portion"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 52713555,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 59884350,
+      "aspects": [
+        "taste_quality",
+        "temperature"
+      ],
+      "feeling": "SAD",
+      "rate": 2
+    },
+    {
+      "review_id": 81511361,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 38542949,
+      "aspects": [
+        "courier",
+        "service"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 76112638,
+      "aspects": [
+        "taste_quality",
+        "temperature",
+        "courier",
+        "service"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 46458820,
+      "aspects": [
+        "taste_quality"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 28152884,
+      "aspects": [
+        "taste_quality",
+        "packaging"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 56289423,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 6379999,
+      "aspects": [
+        "taste_quality",
+        "temperature",
+        "packaging",
+        "portion"
+      ],
+      "feeling": "HAPPY",
+      "rate": 0
+    },
+    {
+      "review_id": 55893072,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 75855626,
+      "aspects": [],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 72626156,
+      "aspects": [
+        "taste_quality"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 10711279,
+      "aspects": [
+        "taste_quality",
+        "price_value",
+        "delivery_delay",
+        "service"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 14895872,
+      "aspects": [
+        "taste_quality"
+      ],
+      "feeling": "SAD",
+      "rate": 4
+    },
+    {
+      "review_id": 81893146,
+      "aspects": [
+        "taste_quality",
+        "temperature"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 81069078,
+      "aspects": [
+        "taste_quality"
+      ],
+      "feeling": "HAPPY",
+      "rate": 10
+    },
+    {
+      "review_id": 77833888,
+      "aspects": [
+        "courier",
+        "service"
+      ],
+      "feeling": "HAPPY",
+      "rate": 8
+    },
+    {
+      "review_id": 79107131,
+      "aspects": [
+        "taste_quality",
+        "portion"
+      ],
+      "feeling": "HAPPY",
+      "rate": 6
+    }
+  ],
+  "caveat": "Keyword hits are not ABSA labels; review IDs allow authorized local inspection without publishing customer text."
+}

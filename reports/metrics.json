@@ -1,0 +1,1261 @@
+{
+  "settings": {
+    "sample_size": 20000,
+    "seed": 42
+  },
+  "dependencies": {
+    "duckdb": "1.5.6",
+    "pyarrow": "25.0.1",
+    "huggingface-hub": "1.17.0",
+    "jdatetime": "6.1.1"
+  },
+  "dataset_revisions": {
+    "snappfood-reviews": "6091ba922cfbefec842e578e7768d0392d876782",
+    "snappfood-review-replies": "9d6547e017f803065a62dcee88c66735615af2ad",
+    "snappfood-menus": "b2ec1e694d4a30c2f5ffb0be3b45f0fd3b602eb7",
+    "snappfood-vendors": "a3d53011c3012e53a0c715bb11791e5fdb068e42"
+  },
+  "datasets": {
+    "snappfood-reviews": {
+      "status": "audited",
+      "rows": 6536959,
+      "scope": "full unless labeled sample",
+      "fields": {
+        "id": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "product_alias": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "sender": {
+          "null": 0,
+          "empty": 4532,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "date": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "feeling": {
+          "null": 0,
+          "empty": 2164,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "rate": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "rating": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "comment_text": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        },
+        "fetched_at": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 6536959,
+          "scope": "full"
+        }
+      },
+      "duplicate_id_rows": 0,
+      "distinct_ids": 6536959,
+      "duplicate_text_rows": 1891993,
+      "sample": {
+        "size": 20000,
+        "seed": 42,
+        "method": "lowest stable hash(id, seed); duplicate IDs retain stable id order",
+        "text": {
+          "persian": {
+            "count": 19958,
+            "denominator": 20000
+          },
+          "latin": {
+            "count": 54,
+            "denominator": 20000
+          },
+          "arabic_yeh": {
+            "count": 632,
+            "denominator": 20000
+          },
+          "arabic_kaf": {
+            "count": 355,
+            "denominator": 20000
+          },
+          "zwnj": {
+            "count": 931,
+            "denominator": 20000
+          },
+          "emoji": {
+            "count": 0,
+            "denominator": 20000
+          },
+          "url": {
+            "count": 0,
+            "denominator": 20000
+          },
+          "html": {
+            "count": 0,
+            "denominator": 20000
+          }
+        },
+        "chars_quantiles": {
+          "0": 1,
+          "0.1": 10,
+          "0.5": 40,
+          "0.9": 128,
+          "0.99": 273,
+          "1": 839
+        },
+        "words_quantiles": {
+          "0": 0,
+          "0.1": 2,
+          "0.5": 8,
+          "0.9": 27,
+          "0.99": 58,
+          "1": 174
+        },
+        "short_under_4_words": 4542,
+        "normalized_duplicate_rows_proxy": 3911,
+        "normalized_duplicate_note": "Normalization proxy only; does not measure semantic near duplicates",
+        "happy_with_complaint_term": 1125,
+        "sad_with_praise_term": 330,
+        "rating_text_conflict_note": "Keyword candidates only; mixed-aspect reviews are not necessarily mislabeled"
+      },
+      "feeling_distribution": [
+        [
+          "HAPPY",
+          5507291
+        ],
+        [
+          "SAD",
+          1018601
+        ],
+        [
+          "NOTHING",
+          8903
+        ],
+        [
+          "",
+          2164
+        ]
+      ],
+      "rate_distribution": [
+        [
+          "10",
+          3909375
+        ],
+        [
+          "8",
+          829938
+        ],
+        [
+          "2",
+          666144
+        ],
+        [
+          "6",
+          628823
+        ],
+        [
+          "4",
+          304398
+        ],
+        [
+          "0",
+          198280
+        ],
+        [
+          "20",
+          1
+        ]
+      ],
+      "rating_distribution": [
+        [
+          "10",
+          3909375
+        ],
+        [
+          "8",
+          829938
+        ],
+        [
+          "2",
+          666144
+        ],
+        [
+          "6",
+          628823
+        ],
+        [
+          "4",
+          304398
+        ],
+        [
+          "0",
+          198280
+        ],
+        [
+          "20",
+          1
+        ]
+      ],
+      "rate_rating_disagreement_rows": 0,
+      "feeling_rating_cross": [
+        [
+          "",
+          0,
+          2164
+        ],
+        [
+          "HAPPY",
+          0,
+          139151
+        ],
+        [
+          "HAPPY",
+          2,
+          2
+        ],
+        [
+          "HAPPY",
+          4,
+          1
+        ],
+        [
+          "HAPPY",
+          6,
+          628823
+        ],
+        [
+          "HAPPY",
+          8,
+          829938
+        ],
+        [
+          "HAPPY",
+          10,
+          3909375
+        ],
+        [
+          "HAPPY",
+          20,
+          1
+        ],
+        [
+          "NOTHING",
+          0,
+          8903
+        ],
+        [
+          "SAD",
+          0,
+          48062
+        ],
+        [
+          "SAD",
+          2,
+          666142
+        ],
+        [
+          "SAD",
+          4,
+          304397
+        ]
+      ]
+    },
+    "snappfood-review-replies": {
+      "status": "audited",
+      "rows": 2356705,
+      "scope": "full unless labeled sample",
+      "fields": {
+        "id": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2356705,
+          "scope": "full"
+        },
+        "review_id": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2356705,
+          "scope": "full"
+        },
+        "source": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2356705,
+          "scope": "full"
+        },
+        "comment_text": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2356705,
+          "scope": "full"
+        },
+        "date": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2356705,
+          "scope": "full"
+        }
+      },
+      "duplicate_id_rows": 0,
+      "distinct_ids": 2356705,
+      "duplicate_text_rows": 1071497,
+      "sample": {
+        "size": 20000,
+        "seed": 42,
+        "method": "lowest stable hash(id, seed); duplicate IDs retain stable id order",
+        "text": {
+          "persian": {
+            "count": 19988,
+            "denominator": 20000
+          },
+          "latin": {
+            "count": 375,
+            "denominator": 20000
+          },
+          "arabic_yeh": {
+            "count": 615,
+            "denominator": 20000
+          },
+          "arabic_kaf": {
+            "count": 280,
+            "denominator": 20000
+          },
+          "zwnj": {
+            "count": 2104,
+            "denominator": 20000
+          },
+          "emoji": {
+            "count": 0,
+            "denominator": 20000
+          },
+          "url": {
+            "count": 19,
+            "denominator": 20000
+          },
+          "html": {
+            "count": 0,
+            "denominator": 20000
+          }
+        },
+        "chars_quantiles": {
+          "0": 2,
+          "0.1": 10,
+          "0.5": 53,
+          "0.9": 169,
+          "0.99": 301,
+          "1": 1013
+        },
+        "words_quantiles": {
+          "0": 1,
+          "0.1": 2,
+          "0.5": 10,
+          "0.9": 32,
+          "0.99": 57,
+          "1": 228
+        },
+        "short_under_4_words": 3497,
+        "normalized_duplicate_rows_proxy": 5507,
+        "normalized_duplicate_note": "Normalization proxy only; does not measure semantic near duplicates"
+      },
+      "source_distribution": [
+        [
+          "VENDOR",
+          2173475
+        ],
+        [
+          "ZOODFOOD",
+          183230
+        ]
+      ]
+    },
+    "snappfood-menus": {
+      "status": "audited",
+      "rows": 2104473,
+      "scope": "full unless labeled sample",
+      "fields": {
+        "id": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "alias": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "vendor_code": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "category_db_id": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "title": {
+          "null": 0,
+          "empty": 72,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "description": {
+          "null": 0,
+          "empty": 268209,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "price": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "discount_amount": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "final_price": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "rate": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "is_eco": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 2104473,
+          "scope": "full"
+        },
+        "image_url": {
+          "null": 0,
+          "empty": 420155,
+          "denominator": 2104473,
+          "scope": "full"
+        }
+      },
+      "duplicate_id_rows": 0,
+      "distinct_ids": 2104473,
+      "rate_distribution": [
+        [
+          "0.0",
+          857129
+        ],
+        [
+          "10.0",
+          252816
+        ],
+        [
+          "8.0",
+          83379
+        ],
+        [
+          "6.0",
+          54077
+        ],
+        [
+          "2.0",
+          38654
+        ],
+        [
+          "9.0",
+          38587
+        ],
+        [
+          "8.666666666",
+          20964
+        ],
+        [
+          "9.333333333",
+          20434
+        ],
+        [
+          "7.0",
+          20071
+        ],
+        [
+          "7.333333333",
+          20061
+        ],
+        [
+          "4.0",
+          17477
+        ],
+        [
+          "9.5",
+          11822
+        ],
+        [
+          "8.5",
+          11450
+        ],
+        [
+          "8.4",
+          10077
+        ],
+        [
+          "6.666666666",
+          9963
+        ],
+        [
+          "7.5",
+          9499
+        ],
+        [
+          "9.2",
+          8166
+        ],
+        [
+          "5.0",
+          7959
+        ],
+        [
+          "8.8",
+          7947
+        ],
+        [
+          "9.6",
+          7702
+        ],
+        [
+          "8.333333333",
+          6479
+        ],
+        [
+          "7.6",
+          6322
+        ],
+        [
+          "8.857142857",
+          5450
+        ],
+        [
+          "8.571428571",
+          5040
+        ],
+        [
+          "7.2",
+          4945
+        ],
+        [
+          "9.666666666",
+          4900
+        ],
+        [
+          "6.5",
+          4794
+        ],
+        [
+          "7.666666666",
+          4603
+        ],
+        [
+          "6.8",
+          4596
+        ],
+        [
+          "8.285714285",
+          4487
+        ]
+      ]
+    },
+    "snappfood-vendors": {
+      "status": "audited",
+      "rows": 42249,
+      "scope": "full unless labeled sample",
+      "fields": {
+        "id": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "vendorCode": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "title": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "description": {
+          "null": 0,
+          "empty": 13409,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "rate": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "rating": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "logo": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "tax": {
+          "null": 209,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "serviceFee": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "deliveryArea": {
+          "null": 0,
+          "empty": 41445,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "discount": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "isOpen": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "minDeliveryFee": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "maxDeliveryFee": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "deliveryTime": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "minOrder": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "address": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "phone": {
+          "null": 0,
+          "empty": 34436,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "website": {
+          "null": 0,
+          "empty": 42249,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "lat": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "lon": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "priority": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "city": {
+          "null": 0,
+          "empty": 9,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "city_en": {
+          "null": 0,
+          "empty": 9,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "area": {
+          "null": 0,
+          "empty": 38439,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "commentCount": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "establishment": {
+          "null": 0,
+          "empty": 4376,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "costsForTwo": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "onlineOrder": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "voteCount": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "menuUrl": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "vendorType": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "budgetClass": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "vendorTypeTitle": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "isZFExpress": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "isDeliveryFeeHasDiscount": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "backgroundImage": {
+          "null": 0,
+          "empty": 93,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "has_coupon": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "coupon_count": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "best_coupon": {
+          "null": 0,
+          "empty": 21264,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "is_pro": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "countReview": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "countOfUserImages": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "trendingScore": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "is_food_party": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "is_market_party": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "coupon_badge": {
+          "null": 0,
+          "empty": 24822,
+          "denominator": 42249,
+          "scope": "full"
+        },
+        "last_updated": {
+          "null": 0,
+          "empty": 0,
+          "denominator": 42249,
+          "scope": "full"
+        }
+      },
+      "duplicate_id_rows": 0,
+      "distinct_ids": 42249,
+      "rate_distribution": [
+        [
+          "4.5",
+          4489
+        ],
+        [
+          "4.4",
+          4405
+        ],
+        [
+          "4.3",
+          3936
+        ],
+        [
+          "4.6",
+          3920
+        ],
+        [
+          "0.0",
+          3445
+        ],
+        [
+          "4.7",
+          3106
+        ],
+        [
+          "4.2",
+          3051
+        ],
+        [
+          "4.1",
+          2488
+        ],
+        [
+          "4.0",
+          2326
+        ],
+        [
+          "5.0",
+          2233
+        ],
+        [
+          "4.8",
+          1913
+        ],
+        [
+          "3.9",
+          1345
+        ],
+        [
+          "3.8",
+          1067
+        ],
+        [
+          "4.9",
+          803
+        ],
+        [
+          "3.7",
+          788
+        ],
+        [
+          "3.6",
+          533
+        ],
+        [
+          "3.5",
+          463
+        ],
+        [
+          "3.0",
+          392
+        ],
+        [
+          "3.4",
+          316
+        ],
+        [
+          "3.3",
+          284
+        ],
+        [
+          "1.0",
+          191
+        ],
+        [
+          "3.2",
+          165
+        ],
+        [
+          "3.1",
+          113
+        ],
+        [
+          "2.0",
+          89
+        ],
+        [
+          "2.5",
+          65
+        ],
+        [
+          "2.8",
+          63
+        ],
+        [
+          "2.9",
+          55
+        ],
+        [
+          "2.7",
+          49
+        ],
+        [
+          "2.3",
+          41
+        ],
+        [
+          "2.6",
+          34
+        ]
+      ],
+      "rating_distribution": [
+        [
+          "0.0",
+          5113
+        ],
+        [
+          "10.0",
+          1218
+        ],
+        [
+          "8.0",
+          325
+        ],
+        [
+          "6.0",
+          212
+        ],
+        [
+          "9.0",
+          152
+        ],
+        [
+          "2.0",
+          125
+        ],
+        [
+          "7.0",
+          84
+        ],
+        [
+          "8.666666666666666",
+          82
+        ],
+        [
+          "7.333333333333333",
+          75
+        ],
+        [
+          "9.333333333333334",
+          74
+        ],
+        [
+          "9.5",
+          64
+        ],
+        [
+          "8.4",
+          60
+        ],
+        [
+          "4.0",
+          56
+        ],
+        [
+          "7.5",
+          54
+        ],
+        [
+          "9.6",
+          52
+        ],
+        [
+          "10.000000000000002",
+          44
+        ],
+        [
+          "8.8",
+          43
+        ],
+        [
+          "9.2",
+          42
+        ],
+        [
+          "9.999999999999998",
+          40
+        ],
+        [
+          "5.0",
+          33
+        ],
+        [
+          "8.5",
+          31
+        ],
+        [
+          "6.666666666666667",
+          30
+        ],
+        [
+          "7.6",
+          22
+        ],
+        [
+          "6.8",
+          21
+        ],
+        [
+          "4.666666666666667",
+          19
+        ],
+        [
+          "7.2",
+          19
+        ],
+        [
+          "6.5",
+          17
+        ],
+        [
+          "6.4",
+          14
+        ],
+        [
+          "5.333333333333333",
+          13
+        ],
+        [
+          "9.671107250728262",
+          7
+        ]
+      ],
+      "city_distribution": [
+        [
+          "تهران",
+          12892
+        ],
+        [
+          "مشهد",
+          3635
+        ],
+        [
+          "کرج",
+          3493
+        ],
+        [
+          "اصفهان",
+          2892
+        ],
+        [
+          "شیراز",
+          2351
+        ],
+        [
+          "تبریز",
+          1810
+        ],
+        [
+          "اهواز",
+          1174
+        ],
+        [
+          "قم",
+          1096
+        ],
+        [
+          "رشت",
+          918
+        ],
+        [
+          "کرمان",
+          729
+        ],
+        [
+          "ارومیه",
+          679
+        ],
+        [
+          "یزد",
+          644
+        ],
+        [
+          "همدان",
+          534
+        ],
+        [
+          "قزوین",
+          460
+        ],
+        [
+          "بندرعباس",
+          428
+        ],
+        [
+          "اردبیل",
+          423
+        ],
+        [
+          "کرمانشاه",
+          422
+        ],
+        [
+          "ساری",
+          386
+        ],
+        [
+          "گرگان",
+          337
+        ],
+        [
+          "اراک",
+          329
+        ],
+        [
+          "زنجان",
+          329
+        ],
+        [
+          "شاهین شهر",
+          262
+        ],
+        [
+          "اسلامشهر",
+          257
+        ],
+        [
+          "اندیشه",
+          239
+        ],
+        [
+          "بوشهر",
+          234
+        ],
+        [
+          "خرم آباد",
+          220
+        ],
+        [
+          "کاشان",
+          213
+        ],
+        [
+          "بابل",
+          201
+        ],
+        [
+          "بجنورد",
+          181
+        ],
+        [
+          "نیشابور",
+          176
+        ]
+      ],
+      "rate_rating_disagreement_rows": 38804
+    }
+  }
+}

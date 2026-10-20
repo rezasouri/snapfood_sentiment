@@ -1,0 +1,9 @@
+# Temporal and statistical feasibility
+
+All 6,536,959 review dates and 2,356,705 reply dates parsed as **Jalali**, with zero invalid/missing dates. Converted review range: 2016-04-19 to 2026-01-02; reply range: 2016-05-19 to 2026-01-02. Review `fetched_at` ranges only from 2026-01-02 16:28:43 to 18:40:57. It is collection time, not review time. Exact monthly/weekly volumes: [`reports/temporal_analysis.json`](../reports/temporal_analysis.json).
+
+Review counts by Jalali year grew from 13,553 in 1395 to 1,707,072 in 1403; 1404 is partial (1,601,211 through 1404/10/12). This growth may reflect platform growth, collection coverage or selection; causal attribution is unsupported. The dataset is a single collected snapshot and its completeness relative to all platform reviews is unknown.
+
+Daily/weekly/monthly **descriptive review volume** is feasible. Vendor-month counts on the conservative item-or-unique-alias subset form 603,050 observed cells; 50,199 have at least 30 reviews, and 4,856 have at least 100. The ≥30 cells contain 2,936,231 reviews. Sparse cells must be suppressed or pooled. Vendor trends are conditional on stable keys and no historical menu key reuse.
+
+Issue rates require human/model issue labels. Recommended denominator: all eligible, text-bearing, uniquely mapped reviews for that vendor and period; also show raw numerator, denominator and Wilson confidence interval. For issue-rate display require ≥30 denominator and for anomaly alerts ≥100 plus at least two comparison periods and a minimum absolute effect. Compare a rate with a baseline, not raw complaint counts. These are design defaults to validate, not data-derived statistical guarantees. Review-writing and collection bias remain; order-level complaint rates cannot be computed without order counts. Daily vendor issue trends and causal claims are unsupported with present evidence.

@@ -1,0 +1,215 @@
+{
+  "communities": {
+    "0": [
+      "any",
+      "argparse",
+      "csv",
+      "path",
+      "pyarrow_parquet",
+      "scripts_common_metadata",
+      "scripts_common_paths",
+      "scripts_common_save_json",
+      "scripts_inspect_datasets",
+      "scripts_inspect_datasets_main",
+      "scripts_inspect_datasets_rationale_1"
+    ],
+    "1": [
+      "huggingface_hub",
+      "pathlib",
+      "scripts_common",
+      "scripts_common_rationale_1",
+      "subprocess",
+      "sys",
+      "tests_test_audit_logic",
+      "tests_test_audit_logic_test_jalali_date_validation",
+      "tests_test_audit_logic_test_join_coverage_denominator",
+      "tests_test_audit_logic_test_sampling_is_deterministic_and_order_independent",
+      "typing"
+    ],
+    "2": [
+      "importlib_metadata",
+      "logging",
+      "scripts_audit_data_quality",
+      "scripts_audit_data_quality_duplicate_count",
+      "scripts_audit_data_quality_main",
+      "scripts_audit_data_quality_normalized_text",
+      "scripts_audit_data_quality_rationale_1",
+      "scripts_audit_data_quality_text_features",
+      "scripts_common_configure",
+      "tests_test_audit_logic_test_duplicate_and_normalization",
+      "unicodedata"
+    ],
+    "3": [
+      "collections",
+      "datetime",
+      "duckdbpyconnection",
+      "jdatetime",
+      "scripts_analyze_temporal",
+      "scripts_analyze_temporal_main",
+      "scripts_analyze_temporal_parse_review_date",
+      "scripts_analyze_temporal_rationale_1",
+      "scripts_common_relation"
+    ],
+    "4": [
+      "duckdb",
+      "re",
+      "scripts_analyze_text",
+      "scripts_analyze_text_candidate_aspects",
+      "scripts_analyze_text_main",
+      "scripts_analyze_text_rationale_1",
+      "scripts_common_sample_sql"
+    ],
+    "5": [
+      "json",
+      "scripts_analyze_relationships",
+      "scripts_analyze_relationships_join_coverage",
+      "scripts_analyze_relationships_main",
+      "scripts_analyze_relationships_rationale_1",
+      "scripts_common_load_inventory",
+      "scripts_common_rationale_61"
+    ],
+    "6": [
+      "pkg_snappfood_cx_feasibility"
+    ]
+  },
+  "cohesion": {
+    "0": 0.32727272727272727,
+    "1": 0.21818181818181817,
+    "2": 0.2727272727272727,
+    "3": 0.3055555555555556,
+    "4": 0.47619047619047616,
+    "5": 0.42857142857142855,
+    "6": 1.0
+  },
+  "gods": [
+    {
+      "id": "scripts_common_save_json",
+      "label": "save_json()",
+      "degree": 14
+    },
+    {
+      "id": "scripts_common_load_inventory",
+      "label": "load_inventory()",
+      "degree": 13
+    },
+    {
+      "id": "scripts_common_configure",
+      "label": "configure()",
+      "degree": 12
+    },
+    {
+      "id": "scripts_common_relation",
+      "label": "relation()",
+      "degree": 10
+    },
+    {
+      "id": "scripts_audit_data_quality_main",
+      "label": "main()",
+      "degree": 9
+    },
+    {
+      "id": "scripts_analyze_text_main",
+      "label": "main()",
+      "degree": 9
+    },
+    {
+      "id": "scripts_inspect_datasets_main",
+      "label": "main()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_analyze_relationships_main",
+      "label": "main()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_analyze_temporal_main",
+      "label": "main()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_common_sample_sql",
+      "label": "sample_sql()",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "test_sampling_is_deterministic_and_order_independent()",
+      "target": "sample_sql()",
+      "source_files": [
+        "tests/test_audit_logic.py",
+        "scripts/common.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities; peripheral node `test_sampling_is_deterministic_and_order_independent()` unexpectedly reaches hub `sample_sql()`"
+    },
+    {
+      "source": "test_jalali_date_validation()",
+      "target": "parse_review_date()",
+      "source_files": [
+        "tests/test_audit_logic.py",
+        "scripts/analyze_temporal.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_join_coverage_denominator()",
+      "target": "join_coverage()",
+      "source_files": [
+        "tests/test_audit_logic.py",
+        "scripts/analyze_relationships.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_duplicate_and_normalization()",
+      "target": "duplicate_count()",
+      "source_files": [
+        "tests/test_audit_logic.py",
+        "scripts/audit_data_quality.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    },
+    {
+      "source": "test_duplicate_and_normalization()",
+      "target": "normalized_text()",
+      "source_files": [
+        "tests/test_audit_logic.py",
+        "scripts/audit_data_quality.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `save_json()` connect `save_json` to `common.py`, `audit_data_quality.py`, `analyze_temporal.py`, `analyze_text.py`, `load_inventory`?",
+      "why": "High betweenness centrality (0.103) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `snappfood-cx-feasibility` to the rest of the system?",
+      "why": "1 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `load_inventory()` connect `load_inventory` to `save_json`, `common.py`, `audit_data_quality.py`, `analyze_temporal.py`, `analyze_text.py`?",
+      "why": "High betweenness centrality (0.084) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `configure()` connect `audit_data_quality.py` to `save_json`, `common.py`, `analyze_temporal.py`, `analyze_text.py`, `load_inventory`?",
+      "why": "High betweenness centrality (0.064) - this node is a cross-community bridge."
+    }
+  ]
+}

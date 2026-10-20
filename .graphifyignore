@@ -1,0 +1,14 @@
+.env
+.venv/
+.git/
+data/
+graphify-out/
+__pycache__/
+.pytest_cache/
+*.parquet
+snapfood.ipynb
+reports/inventory.json
+reports/metrics.json
+reports/text_analysis.json
+reports/temporal_analysis.json
+reports/join_details.json

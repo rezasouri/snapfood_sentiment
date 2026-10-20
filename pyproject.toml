@@ -1,0 +1,18 @@
+[project]
+name = "snappfood-cx-feasibility"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["duckdb>=1.0", "huggingface-hub>=0.25", "pyarrow>=17", "jdatetime>=5", "pydantic>=2,<3"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/snappfood_cx"]
+
+[project.scripts]
+snappfood-prepare-benchmarks = "snappfood_cx.benchmarks:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
