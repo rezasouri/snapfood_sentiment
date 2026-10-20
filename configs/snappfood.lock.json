@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "datasets": {
+    "snappfood-reviews": {
+      "repo": "EhsanShahbazi/snappfood-reviews",
+      "revision": "6091ba922cfbefec842e578e7768d0392d876782",
+      "files": [
+        {
+          "name": "data/train-00000-of-00003.parquet",
+          "size_bytes": 163527717
+        },
+        {
+          "name": "data/train-00001-of-00003.parquet",
+          "size_bytes": 158199762
+        },
+        {
+          "name": "data/train-00002-of-00003.parquet",
+          "size_bytes": 138551666
+        }
+      ]
+    },
+    "snappfood-menus": {
+      "repo": "EhsanShahbazi/snappfood-menus",
+      "revision": "b2ec1e694d4a30c2f5ffb0be3b45f0fd3b602eb7",
+      "files": [
+        {
+          "name": "data/train-00000-of-00002.parquet",
+          "size_bytes": 88636458
+        },
+        {
+          "name": "data/train-00001-of-00002.parquet",
+          "size_bytes": 91107766
+        }
+      ]
+    },
+    "snappfood-vendors": {
+      "repo": "EhsanShahbazi/snappfood-vendors",
+      "revision": "a3d53011c3012e53a0c715bb11791e5fdb068e42",
+      "files": [
+        {
+          "name": "data/train-00000-of-00001.parquet",
+          "size_bytes": 7683108
+        }
+      ]
+    }
+  }
+}

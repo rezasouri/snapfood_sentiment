@@ -1,0 +1,51 @@
+{
+  "run_signature": "65ab9def1193d8d5ba1e39afa46c1c4507c1268a978e3d3db9f325465667faf6",
+  "sample_sha256": "5eb74500fab3465960de415e938e5911bd6388620d82a20a1c10a7e28784bcc7",
+  "sample_size": 1000,
+  "processed": 1000,
+  "complete": true,
+  "accepted_reviews": 461,
+  "rejected_reviews": 539,
+  "valid_output_rate": 0.461,
+  "accepted_empty_reviews": 458,
+  "accepted_records": 4,
+  "rejection_reasons": {
+    "invalid_json_or_schema": 537,
+    "output_truncated": 1,
+    "evidence_not_found": 1
+  },
+  "aspect_record_counts": {
+    "temperature": 2,
+    "portion_size": 1,
+    "taste_quality": 1
+  },
+  "sentiment_record_counts": {
+    "positive": 3,
+    "neutral": 1
+  },
+  "input_tokens": 296383,
+  "output_tokens": 17389,
+  "accumulated_batch_seconds": 173.5288633230016,
+  "latest_invocation_seconds": 175.42222416899995,
+  "peak_cuda_allocated_bytes": 4408519168,
+  "model": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "dtype": "float16",
+    "batch_size": 8,
+    "max_input_tokens": 2048,
+    "max_new_tokens": 192,
+    "seed": 42,
+    "enable_thinking": false,
+    "do_sample": false
+  },
+  "prompt_version": "persian-aspects-v1",
+  "prompt_sha256": "ee39339611ef9bdf55b04343d6b0bfb65f3158be5cfaed3ca0838bf9d95b7c48",
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "pydantic": "2.14.1",
+    "duckdb": "1.5.6"
+  },
+  "interpretation": "Validity is JSON/ID/exact-evidence validation, not aspect or sentiment accuracy. Counts are pilot outputs, not population issue rates."
+}

@@ -13,6 +13,9 @@ packages = ["src/snappfood_cx"]
 
 [project.scripts]
 snappfood-prepare-benchmarks = "snappfood_cx.benchmarks:main"
+snappfood-sample-reviews = "snappfood_cx.sampling:main"
+snappfood-run-pilot = "snappfood_cx.pilot:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+inference = ["torch==2.8.0", "transformers>=4.51,<5", "accelerate>=1,<2"]

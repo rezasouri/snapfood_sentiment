@@ -1,0 +1,313 @@
+{
+  "sample_size": 1000,
+  "seed": 42,
+  "eligible_population": 6500836,
+  "sample_sha256": "5eb74500fab3465960de415e938e5911bd6388620d82a20a1c10a7e28784bcc7",
+  "dataset_revisions": {
+    "snappfood-reviews": "6091ba922cfbefec842e578e7768d0392d876782",
+    "snappfood-menus": "b2ec1e694d4a30c2f5ffb0be3b45f0fd3b602eb7",
+    "snappfood-vendors": "a3d53011c3012e53a0c715bb11791e5fdb068e42"
+  },
+  "method": "minimum-one + largest-remainder rating/year quotas; vendor round-robin ordered by SHA-256",
+  "strata": [
+    {
+      "year": 1395,
+      "rating": 0,
+      "population": 11854,
+      "sample": 3
+    },
+    {
+      "year": 1396,
+      "rating": 0,
+      "population": 35317,
+      "sample": 6
+    },
+    {
+      "year": 1397,
+      "rating": 0,
+      "population": 76112,
+      "sample": 12
+    },
+    {
+      "year": 1397,
+      "rating": 2,
+      "population": 174,
+      "sample": 1
+    },
+    {
+      "year": 1397,
+      "rating": 4,
+      "population": 63,
+      "sample": 1
+    },
+    {
+      "year": 1397,
+      "rating": 6,
+      "population": 97,
+      "sample": 1
+    },
+    {
+      "year": 1397,
+      "rating": 8,
+      "population": 125,
+      "sample": 1
+    },
+    {
+      "year": 1397,
+      "rating": 10,
+      "population": 360,
+      "sample": 1
+    },
+    {
+      "year": 1398,
+      "rating": 0,
+      "population": 45890,
+      "sample": 8
+    },
+    {
+      "year": 1398,
+      "rating": 2,
+      "population": 22600,
+      "sample": 4
+    },
+    {
+      "year": 1398,
+      "rating": 4,
+      "population": 9092,
+      "sample": 2
+    },
+    {
+      "year": 1398,
+      "rating": 6,
+      "population": 16559,
+      "sample": 3
+    },
+    {
+      "year": 1398,
+      "rating": 8,
+      "population": 25560,
+      "sample": 5
+    },
+    {
+      "year": 1398,
+      "rating": 10,
+      "population": 68531,
+      "sample": 11
+    },
+    {
+      "year": 1399,
+      "rating": 0,
+      "population": 10125,
+      "sample": 2
+    },
+    {
+      "year": 1399,
+      "rating": 2,
+      "population": 46409,
+      "sample": 8
+    },
+    {
+      "year": 1399,
+      "rating": 4,
+      "population": 17647,
+      "sample": 4
+    },
+    {
+      "year": 1399,
+      "rating": 6,
+      "population": 30515,
+      "sample": 5
+    },
+    {
+      "year": 1399,
+      "rating": 8,
+      "population": 44902,
+      "sample": 8
+    },
+    {
+      "year": 1399,
+      "rating": 10,
+      "population": 137358,
+      "sample": 21
+    },
+    {
+      "year": 1400,
+      "rating": 0,
+      "population": 8041,
+      "sample": 2
+    },
+    {
+      "year": 1400,
+      "rating": 2,
+      "population": 73253,
+      "sample": 12
+    },
+    {
+      "year": 1400,
+      "rating": 4,
+      "population": 30878,
+      "sample": 5
+    },
+    {
+      "year": 1400,
+      "rating": 6,
+      "population": 52787,
+      "sample": 9
+    },
+    {
+      "year": 1400,
+      "rating": 8,
+      "population": 106410,
+      "sample": 17
+    },
+    {
+      "year": 1400,
+      "rating": 10,
+      "population": 409670,
+      "sample": 61
+    },
+    {
+      "year": 1401,
+      "rating": 0,
+      "population": 25,
+      "sample": 1
+    },
+    {
+      "year": 1401,
+      "rating": 2,
+      "population": 79069,
+      "sample": 13
+    },
+    {
+      "year": 1401,
+      "rating": 4,
+      "population": 38225,
+      "sample": 7
+    },
+    {
+      "year": 1401,
+      "rating": 6,
+      "population": 85692,
+      "sample": 13
+    },
+    {
+      "year": 1401,
+      "rating": 8,
+      "population": 113739,
+      "sample": 18
+    },
+    {
+      "year": 1401,
+      "rating": 10,
+      "population": 437436,
+      "sample": 65
+    },
+    {
+      "year": 1402,
+      "rating": 0,
+      "population": 2,
+      "sample": 1
+    },
+    {
+      "year": 1402,
+      "rating": 2,
+      "population": 119490,
+      "sample": 18
+    },
+    {
+      "year": 1402,
+      "rating": 4,
+      "population": 56283,
+      "sample": 9
+    },
+    {
+      "year": 1402,
+      "rating": 6,
+      "population": 128373,
+      "sample": 20
+    },
+    {
+      "year": 1402,
+      "rating": 8,
+      "population": 155823,
+      "sample": 24
+    },
+    {
+      "year": 1402,
+      "rating": 10,
+      "population": 703979,
+      "sample": 104
+    },
+    {
+      "year": 1403,
+      "rating": 2,
+      "population": 172606,
+      "sample": 26
+    },
+    {
+      "year": 1403,
+      "rating": 4,
+      "population": 80462,
+      "sample": 13
+    },
+    {
+      "year": 1403,
+      "rating": 6,
+      "population": 176765,
+      "sample": 27
+    },
+    {
+      "year": 1403,
+      "rating": 8,
+      "population": 204361,
+      "sample": 31
+    },
+    {
+      "year": 1403,
+      "rating": 10,
+      "population": 1069212,
+      "sample": 158
+    },
+    {
+      "year": 1404,
+      "rating": 2,
+      "population": 149140,
+      "sample": 23
+    },
+    {
+      "year": 1404,
+      "rating": 4,
+      "population": 70234,
+      "sample": 11
+    },
+    {
+      "year": 1404,
+      "rating": 6,
+      "population": 135403,
+      "sample": 21
+    },
+    {
+      "year": 1404,
+      "rating": 8,
+      "population": 175265,
+      "sample": 27
+    },
+    {
+      "year": 1404,
+      "rating": 10,
+      "population": 1068923,
+      "sample": 157
+    }
+  ],
+  "sample_vendors": 254,
+  "mapping_counts": {
+    "unique_alias_vendor": 90,
+    "exact_item": 910
+  },
+  "duplicate_text_rows": 82,
+  "limitations": [
+    "Vendor balancing and minimum quotas are not population-proportional; do not use pilot counts as population issue rates.",
+    "Rating zero is retained as a separate undocumented/unrated stratum; rating 20 is excluded.",
+    "Review year is Jalali, not collection year. Historical mapping validity is still unverified."
+  ]
+}

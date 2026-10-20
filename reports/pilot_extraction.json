@@ -1,0 +1,64 @@
+{
+  "run_signature": "29c16df74f6682a6dd6092895e64ccb7d1fbad7460fa08d646827f6547d236eb",
+  "sample_sha256": "5eb74500fab3465960de415e938e5911bd6388620d82a20a1c10a7e28784bcc7",
+  "sample_size": 1000,
+  "processed": 1000,
+  "complete": true,
+  "accepted_reviews": 884,
+  "rejected_reviews": 116,
+  "valid_output_rate": 0.884,
+  "accepted_empty_reviews": 332,
+  "accepted_records": 986,
+  "rejection_reasons": {
+    "evidence_not_found": 49,
+    "invalid_json_or_schema": 40,
+    "ambiguous_evidence_occurrence": 2,
+    "output_truncated": 25
+  },
+  "aspect_record_counts": {
+    "missing_wrong_items": 138,
+    "taste_quality": 407,
+    "delivery_delay": 93,
+    "temperature": 87,
+    "packaging": 52,
+    "portion_size": 86,
+    "courier_behavior": 80,
+    "price_value": 43
+  },
+  "sentiment_record_counts": {
+    "negative": 382,
+    "positive": 484,
+    "neutral": 117,
+    "mixed": 3
+  },
+  "input_tokens": 565383,
+  "output_tokens": 67457,
+  "accumulated_batch_seconds": 751.7202255489997,
+  "latest_invocation_seconds": 0.16642635300013353,
+  "peak_cuda_allocated_bytes": 4773566976,
+  "model": {
+    "model_id": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+    "dtype": "float16",
+    "batch_size": 8,
+    "max_input_tokens": 2048,
+    "max_new_tokens": 192,
+    "seed": 42,
+    "enable_thinking": false,
+    "do_sample": false
+  },
+  "prompt_version": "persian-aspects-v2",
+  "prompt_sha256": "9d5ae48f2ec2d211a127dfe0a62c89e0219dce66786c1b0042ecc0cd9ce44a9f",
+  "adapter_sha256": "9e938e60e564ae2a3ccb52d050ba8f0a13b4538a9e067e9c9698c64f1ad5af6e",
+  "device_name": "NVIDIA GeForce RTX 3050",
+  "semantic_accuracy": null,
+  "quality_gate_status": "not_evaluated",
+  "versions": {
+    "torch": "2.8.0",
+    "transformers": "4.57.6",
+    "pydantic": "2.14.1",
+    "duckdb": "1.5.6"
+  },
+  "interpretation": "Validity is JSON/ID/exact-evidence validation, not aspect or sentiment accuracy. Counts are pilot outputs, not population issue rates.",
+  "last_inference_invocation_seconds": 756.9205156759995
+}

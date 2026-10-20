@@ -14,6 +14,12 @@ uv run pytest -q
 
 Raw and processed benchmark text stays under ignored `data/benchmarks/`. Source revisions/checksums are pinned in `configs/benchmarks.lock.json`; the extraction JSON Schema is in `schemas/extraction.schema.json`. No model training or inference occurs in this milestone.
 
+## Milestone 2: local extraction pilot
+
+Milestone 2: [local extraction pilot](docs/LOCAL_PILOT.md) adds deterministic sampling, a pinned local model adapter, exact evidence validation, and resumable processing. Run `uv sync --extra dev --extra inference --locked`, then `uv run --extra inference snappfood-sample-reviews` and `uv run --extra inference snappfood-run-pilot`. Review text and raw inference output remain in ignored `data/pilot/`; published reports contain aggregate metrics only.
+
+The actual 1,000-review run accepted 884 structurally grounded outputs (332 empty, 552 nonempty) containing 986 proposed aspect/sentiment records, and rejected 116. Inference batches took 751.7 seconds on the local RTX 3050; peak CUDA allocation was 4.45 GiB. These are pipeline-validity metrics, **not ABSA accuracy**. The quality gate is still `not_evaluated`. See [sampling](reports/pilot_sample.json) and [extraction metrics](reports/pilot_extraction.json).
+
 ## Graphify for coding assistants
 
 This repository includes a project-scoped Graphify skill in `.codex/skills/graphify/`, Codex guidance in `AGENTS.md`, and a local code graph in `graphify-out/`. The graph currently indexes source code and tests; document semantics were skipped to avoid an external LLM call. The `.graphifyignore` file excludes `.env`, cached data, reports containing local details, and the old notebook.

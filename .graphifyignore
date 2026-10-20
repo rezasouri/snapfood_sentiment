@@ -12,3 +12,4 @@ reports/metrics.json
 reports/text_analysis.json
 reports/temporal_analysis.json
 reports/join_details.json
+reports/pilot*.json
