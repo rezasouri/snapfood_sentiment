@@ -1,6 +1,10 @@
-# SnappFood Customer Experience Intelligence — data feasibility study
+# SnappFood Customer Experience Intelligence — Persian Review Analytics & ABSA Feasibility
 
-Project roadmap: [docs/PROJECT_PLAN.md](docs/PROJECT_PLAN.md).
+**A reproducible data-feasibility and NLP engineering study for evidence-grounded analysis of Persian food-delivery customer reviews.** The project investigates dataset quality, review-to-item/vendor relationships, aspect-based sentiment extraction, and the validation needed before making any in-domain quality claims.
+
+> **Current scope:** dataset feasibility and a local extraction pilot. Pipeline-validity metrics are reported separately from ABSA accuracy; verified SnappFood model accuracy has not been established.
+
+**Explore:** [Project roadmap](docs/PROJECT_PLAN.md) · [Dataset feasibility decision](docs/FEASIBILITY_DECISION.md) · [Benchmark preparation](docs/BENCHMARKS.md) · [Local extraction pilot](docs/LOCAL_PILOT.md)
 
 ## Milestone 1: extraction contract and evaluation data
 
